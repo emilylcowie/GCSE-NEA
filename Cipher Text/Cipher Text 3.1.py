@@ -17,13 +17,18 @@ def menu():
             print('Invalid input try again')
 
 def text_file():
-    user_message = input('What is the name of the .txt file containing the message to be encrypted?')
-    with open(user_message, 'r') as file:
-        content = file.read()
-    encrypt()
+    user_message = input('What is the name of the .txt file containing the message to be encrypted?\n')
+    file = open('/workspaces/GCSE-NEA/Cipher Text/'+user_message, 'r')
+    print(file.read())
+    encryption_key()
 
 def encryption_key():
     key = []
     for i in range(0, 8):
-        rand_int = random.randint(33, 126)
+        rand_int = random.randint(34, 125)
         key.append(ascii(rand_int))
+        total += i
+    print("You're key is: ", key)
+    print("total: ", total)
+
+menu()
