@@ -20,7 +20,8 @@ def menu():
             print('Invalid input try again')
 
 def text_file():
-    file = open('Cipher Text/sample.txt','r')
+    filename = str(input('File name:\n'))
+    file = open('Cipher Text/' + filename + '.txt','r')
     file1 = (file.read())
     print(file1)
     return file1
