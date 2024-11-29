@@ -59,6 +59,16 @@ def encrypt(msg, offset_factor):
 
     encrypted_message = " ".join(encrypted)
     print(encrypted_message)
+    save(encrypted_message)
+
+def save(encrypted_msg):
+    filename = input("New file name:\n")
+    with open(f'Cipher Text/{filename}.txt', "x") as file:
+        file.write(encrypted_msg)
+
+def decrypt():
+    text_file()
+    decryption_key = input('Encryption key:\n')
 
 # Main 
 menu()
