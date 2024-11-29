@@ -1,4 +1,5 @@
 import random
+import math
 
 def menu():
     while True:
@@ -9,6 +10,8 @@ def menu():
         3. Quit \n\n'''))
         if choice == 1:
             text_file()
+            encryption_key()
+            encrypt(text_file(), offset_factor(encryption_key()))
         elif choice == 2:
             decrypt()
         elif choice == 3:
@@ -18,17 +21,36 @@ def menu():
 
 def text_file():
     file = open('Cipher Text/sample.txt','r')
-    print(file.read())
-    encryption_key()
+    file1 = (file.read())
+    print(file1)
+    return file1
 
 def encryption_key():
     key = []
-    total = 0
     for i in range(0, 8):
         rand_int = random.randint(34, 125)
         key.append(ascii(rand_int))
-        total += rand_int
     print("You're key is: ", key)
-    print("total: ", total)
-#
+    return rand_int
+    
+def offset_factor(nums):
+    total = 0
+    for i in range(0, 8):
+        total += nums
+    offset = ((math.floor(total / 8))-32)
+    return(offset)
+
+def encrypt(msg, offset_factor):
+    encrypted = []
+    for i in msg:
+        if i != ' ':
+            i = ord(i) + offset_factor
+            if i > 126:
+                i -= 94
+            encrypted.append(i)
+        else:
+            continue
+    print(encrypted)
+#----------main-------------------
+
 menu()
