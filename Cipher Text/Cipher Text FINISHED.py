@@ -1,6 +1,7 @@
 import random
 import math
 
+
 def menu():
     while True:
         choice = int(input('''
@@ -21,12 +22,14 @@ def menu():
         else:
             print('Invalid input, try again.')
 
+
 def text_file():
     # get file name and read it
     filename = input('File name:\n')
     with open(f'Cipher Text/{filename}.txt', 'r') as file:
         file_content = file.read()
     return file_content
+
 
 def encryption_key():
     # make random encryption key
@@ -38,11 +41,13 @@ def encryption_key():
     print("Your key is:", key)
     return key
 
+
 def offset_factor(key):
     # make offset factor from the encryption key
     total = sum(ord(char) for char in key)
     offset = (math.floor(total / 8)) - 32
     return offset
+
 
 def encrypt(msg, offset_factor):
     # encrypt message with offset factor
@@ -60,10 +65,12 @@ def encrypt(msg, offset_factor):
     encrypted_message = "".join(encrypted)
     save(encrypted_message)
 
+
 def save(encrypted_msg):
     filename = input("New file name:\n")
     with open(f'Cipher Text/{filename}.txt', "x") as file:
         file.write(encrypted_msg)
+
 
 def decrypt_admin():
     """Decrypt the message using the provided key."""
@@ -74,16 +81,17 @@ def decrypt_admin():
 
     for char in file_content:
         if char != ' ':
-            decrypted_char = ord(char) - offset_value  # Subtract offset during decryption
+            decrypted_char = ord(char) - offset_value
             if decrypted_char < 32:
-                decrypted_char += 94  # Wrap around to maintain printable ASCII characters
+                decrypted_char += 94
             decrypted_char = chr(decrypted_char)
             decrypted.append(decrypted_char)
         else:
-            decrypted.append(' ')  # Preserve spaces during decryption
+            decrypted.append(' ')
 
-    decrypted_message = "".join(decrypted)  # Join without additional spaces
+    decrypted_message = "".join(decrypted)
     print("Decrypted Message:", decrypted_message)
 
-# Main 
+
+# Main
 menu()
