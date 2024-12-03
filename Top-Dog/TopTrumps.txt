@@ -1,0 +1,180 @@
+Annie the Afgan Hound:
+  exercise: 5
+  intelligence: 2
+  friendliness: 7
+  drool: 2
+
+Bertie the Boxer:
+  exercise: 1
+  intelligence: 38
+  friendliness: 10
+  drool: 6
+
+Betty the Borzoi:
+  exercise: 1
+  intelligence: 23
+  friendliness: 10
+  drool: 1
+
+Charlie the Chihuahua:
+  exercise: 1
+  intelligence: 75
+  friendliness: 9
+  drool: 7
+
+Chaz the Cocker Spaniel:
+  exercise: 5
+  intelligence: 16
+  friendliness: 9
+  drool: 5
+
+Donald the Dalmatian:
+  exercise: 1
+  intelligence: 22
+  friendliness: 7
+  drool: 9
+
+Dottie the Doberman:
+  exercise: 1
+  intelligence: 8
+  friendliness: 5
+  drool: 10
+
+Fern the Fox Terrier:
+  exercise: 1
+  intelligence: 83
+  friendliness: 2
+  drool: 3
+
+Frank the French Bulldog:
+  exercise: 2
+  intelligence: 29
+  friendliness: 3
+  drool: 10
+
+George the Great Dane:
+  exercise: 1
+  intelligence: 32
+  friendliness: 6
+  drool: 2
+
+Gertie the Greyhound:
+  exercise: 4
+  intelligence: 67
+  friendliness: 1
+  drool: 4
+
+Harry the Harrier:
+  exercise: 5
+  intelligence: 93
+  friendliness: 6
+  drool: 5
+
+Ian the Irish Wolfhound:
+  exercise: 5
+  intelligence: 39
+  friendliness: 1
+  drool: 9
+
+Juno the Jack Russell:
+  exercise: 3
+  intelligence: 64
+  friendliness: 8
+  drool: 1
+
+Keith the Kerry Blue:
+  exercise: 4
+  intelligence: 76
+  friendliness: 2
+  drool: 4
+
+Larry the Labrador:
+  exercise: 4
+  intelligence: 100
+  friendliness: 4
+  drool: 8
+
+Marge the Maltese:
+  exercise: 1
+  intelligence: 73
+  friendliness: 4
+  drool: 3
+
+Max the Mutt:
+  exercise: 5
+  intelligence: 94
+  friendliness: 10
+  drool: 6
+
+Nutty the Newfoundland:
+  exercise: 4
+  intelligence: 36
+  friendliness: 2
+  drool: 8
+
+Olive the Old English Sheepdog:
+  exercise: 3
+  intelligence: 79
+  friendliness: 3
+  drool: 8
+
+Peter the Pug:
+  exercise: 1
+  intelligence: 49
+  friendliness: 5
+  drool: 10
+
+Poppy the Pekingese:
+  exercise: 5
+  intelligence: 78
+  friendliness: 1
+  drool: 4
+
+Rosie the Rottweiler:
+  exercise: 2
+  intelligence: 95
+  friendliness: 4
+  drool: 5
+
+Ruby the Retriever:
+  exercise: 4
+  intelligence: 78
+  friendliness: 9
+  drool: 8
+
+Sam the Springer Spaniel:
+  exercise: 2
+  intelligence: 32
+  friendliness: 10
+  drool: 2
+
+Sukie the Saluki:
+  exercise: 4
+  intelligence: 72
+  friendliness: 7
+  drool: 7
+
+Vernon the Vizsla:
+  exercise: 1
+  intelligence: 24
+  friendliness: 3
+  drool: 5
+
+Whilma the West Highland Terrier:
+  exercise: 3
+  intelligence: 17
+  friendliness: 5
+  drool: 6
+
+William the Whippet:
+  exercise: 1
+  intelligence: 84
+  friendliness: 6
+  drool: 8
+
+Yolande the Yorkshire Terrier:
+  exercise: 4
+  intelligence: 99
+  friendliness: 6
+  drool: 3
+
