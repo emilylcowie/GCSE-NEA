@@ -96,7 +96,7 @@ class UserInterface:
             try:
                 category = str(input("Choose your category.\n"))
                 category = category.lower()
-                if category != "exercise" or "intelligence" or "friendliness" or "drool":
+                if category not in ["exercise", "intelligence", "friendliness", "drool"]:
                     raise ValueError("Please enter a valid category")
                 else:
                     self.compare(category)
