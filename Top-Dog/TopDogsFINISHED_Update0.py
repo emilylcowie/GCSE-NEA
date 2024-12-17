@@ -1,5 +1,7 @@
 import random
 import csv
+import time 
+import sys
 
 
 class Make_cards:
@@ -49,7 +51,7 @@ class UserInterface:
 
     def menu(self):
         while True:
-            choice = int(input(''' 
+            choice = int(character_print(''' 
     Welcome, here are your options, please select a number:
         1. Play game
         2. Quit \n\n'''))
@@ -59,12 +61,12 @@ class UserInterface:
             elif choice == 2:
                 exit('Au revoir!')
             else:
-                print('Invalid input, try again.')
+                character_print('Invalid character_print, try again.')
 
     def intro(self):
         while True:
             try:
-                num_cards = int(input(''' 
+                num_cards = int(character_print(''' 
     How many cards do you want to be played?
     (Number must be >3, <31 and an even number)\n'''))
 
@@ -73,7 +75,7 @@ class UserInterface:
                 else:
                     break
             except ValueError as e:
-                print(f"Error: {e}\n")
+                character_print(f"Error: {e}\n")
 
         return num_cards
 
@@ -85,7 +87,7 @@ class UserInterface:
 
         player_deck = cards[:number // 2]
         computer_deck = cards[number // 2:number]
-
+        
         return player_deck, computer_deck
 
     def play(self):
@@ -98,59 +100,64 @@ class UserInterface:
                 computer_card = computer_deck.pop(0)
             except IndexError:
                 if len(computer_deck) == 0:
-                    print("You Win!!!!")
+                    character_print("You Win!!!!")
                 elif len(player_deck) == 0:
-                    print("The computer wins!!!")
-                if str(input("Return to menu? y/n\n")) == 'y':
+                    character_print("The computer wins!!!")
+                if str(character_print("Return to menu? y/n\n")) == 'y':
                     self.menu()
                 else:
                     exit("Au Revoir")
 
-            print("\nYour card:")
-            print(player_card)
-
-            
+            character_print(f"\nYour card:\n{player_card}")
 
             while True:
                 try:
-                    category = input("\nChoose your category (exercise, intelligence, friendliness, drool): ").lower()
+                    category = character_print("\nChoose your category (exercise, intelligence, friendliness, drool): ").lower()
                     if category not in categories:
                         raise ValueError("Please enter a valid category")
                     else:
                         self.compare(category, player_card, computer_card, player_deck, computer_deck, categories)
                         break
                 except ValueError as e:
-                    print(e)
+                    character_print(e)
 
     def compare(self, category, player_card, computer_card, player_deck, computer_deck, categories):
-        print("\nComputer's card:")
-        print(computer_card)
-    
-        print(f"\nComparing category '{category}'...")
+        character_print(f"\nComputer's card:\n{computer_card}")
+        character_print(f"\nComparing category '{category}'...")
 
         player_value = player_card[categories.index(category)+1]
         computer_value = computer_card[categories.index(category)+1]
 
-        print(f"Your card's {category}: {player_value}")
-        print(f"Computer's card's {category}: {computer_value}")
+        character_print(f"Your card's {category}: {player_value}")
+        character_print(f"Computer's card's {category}: {computer_value}")
 
         if player_value > computer_value:
-            print("You win this round!")
+            character_print("You win this round!")
             player_deck.append(player_card)
             player_deck.append(computer_card)
         elif player_value < computer_value:
-            print("Computer wins this round!")
+            character_print("Computer wins this round!")
             computer_deck.append(player_card)
             computer_deck.append(computer_card)
         else:
-            print("It's a tie! No cards are won.")
+            character_print("It's a tie! No cards are won.")
             player_deck.append(player_card)
             computer_deck.append(computer_card)
 
+        print(f"\nYou now have {len(player_deck)} cards")
+        print(f"The computer now has {len(computer_deck)} cards")
+
         if not player_deck:
-            print("Game Over! You lose.")
+            character_print("Game Over! You lose.")
         elif not computer_deck:
-            print("Game Over! You win.")
+            character_print("Game Over! You win.")
+
+def character_print(info):
+    for char in info:
+        sys.stdout.write(char)
+        sys.stdout.flush()
+        time.sleep(0.010)
+    return input()
 
 run_game = UserInterface()
 run_game.menu()
