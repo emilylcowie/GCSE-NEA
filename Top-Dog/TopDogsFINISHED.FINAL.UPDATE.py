@@ -160,7 +160,7 @@ You can also type 'exit' to quit.
             while True:
                 try:
                     category = self.character_print(
-                        "\nChoose your category (exercise, intelligence, friendliness, drool). Type 'exit' to quit: ").lower()
+                        "\nChoose your category ((e)xercise, (i)ntelligence, (f)riendliness, (d)rool). Type 'exit' to quit: ").lower()
                     if category == 'exit':
                         self.character_print("\nExiting game... Goodbye!\n")
                         exit()
